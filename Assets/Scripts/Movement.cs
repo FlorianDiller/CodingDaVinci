@@ -23,7 +23,7 @@ public class Movement : MonoBehaviour
         float v = Input.GetAxisRaw("Vertical");
         float h = Input.GetAxisRaw("Horizontal");
         speed = speed + v * 0.01f;
-        gameObject.transform.position = gameObject.transform.position + speed * gameObject.transform.forward;
+        gameObject.transform.position = gameObject.transform.position + 0.1f * speed * gameObject.transform.forward;
 
         //Rotation and tilting while doing so
         gameObject.transform.Rotate(0.0f, rotSpeed * h, 0.0f);

@@ -176,7 +176,7 @@ Terrain:
   m_DrawInstanced: 0
   m_DrawTreesAndFoliage: 1
   m_ReflectionProbeUsage: 1
-  m_MaterialTemplate: {fileID: 2100000, guid: 1d4b2121a83ecd24594faf7b8d3a4144, type: 2}
+  m_MaterialTemplate: {fileID: 2100000, guid: 48f0c870775cde44c99efad8a476b7b2, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
   m_DeringLightProbesForTrees: 1

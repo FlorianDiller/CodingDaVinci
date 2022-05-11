@@ -13,6 +13,6 @@ public class Kreisel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        gameObject.transform.localRotation = Quaternion.Euler(gameObject.transform.parent.rotation.y, 90, 90);
+        gameObject.transform.GetChild(0).localRotation = Quaternion.Euler(-90f, gameObject.transform.parent.eulerAngles.y - 90f, -90f);
     }
 }

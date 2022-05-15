@@ -11,9 +11,9 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
-  - 
+  - Ocean
+  - Clouds
+  - CloudCorners
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Ocean
+    uniqueID: 3957520709
+    locked: 0
+  - name: Clouds
+    uniqueID: 744844511
     locked: 0

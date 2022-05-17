@@ -77,34 +77,34 @@ public class DataRead : MonoBehaviour
         RaycastHit rayHit;
         foreach (var Site in cdvSiteList.site)
         {
-            if (Site.humanFinds > 0)
+            for (int i = Site.humanFinds; i > 0;  i--)
             {
-                Physics.Raycast(new Vector3(Site.xCoordinate, 50, Site.yCoordinate), Vector3.down, out rayHit);
+                Physics.Raycast(new Vector3(Site.xCoordinate, 1000, Site.yCoordinate), Vector3.down, out rayHit);
                 Instantiate(skullPrefab, rayHit.point, Quaternion.Euler(-90, UnityEngine.Random.Range(0.0f, 360.0f), UnityEngine.Random.Range(-30.0f, 30.0f)));
             }
-            if (Site.fireFinds > 0)
+            for (int i = Site.fireFinds; i > 0; i--)
             {
-                Physics.Raycast(new Vector3(Site.xCoordinate, 50, Site.yCoordinate), Vector3.down, out rayHit);
+                Physics.Raycast(new Vector3(Site.xCoordinate, 1000, Site.yCoordinate), Vector3.down, out rayHit);
                 Instantiate(firePrefab, rayHit.point, Quaternion.Euler(-90, UnityEngine.Random.Range(0.0f, 360.0f), UnityEngine.Random.Range(-30.0f, 30.0f)));
             }
-            if (Site.organicFinds > 0)
+            for (int i = Site.organicFinds; i > 0; i--)
             {
-                Physics.Raycast(new Vector3(Site.xCoordinate, 50, Site.yCoordinate), Vector3.down, out rayHit);
+                Physics.Raycast(new Vector3(Site.xCoordinate, 1000, Site.yCoordinate), Vector3.down, out rayHit);
                 Instantiate(organicPrefab, rayHit.point, Quaternion.Euler(-90, UnityEngine.Random.Range(0.0f, 360.0f), UnityEngine.Random.Range(-30.0f, 30.0f)));
             }
-            if (Site.stoneFinds > 0)
+            for (int i = Site.stoneFinds; i > 0; i--)
             {
-                Physics.Raycast(new Vector3(Site.xCoordinate, 50, Site.yCoordinate), Vector3.down, out rayHit);
+                Physics.Raycast(new Vector3(Site.xCoordinate, 1000, Site.yCoordinate), Vector3.down, out rayHit);
                 Instantiate(stonePrefab, rayHit.point, Quaternion.Euler(-90, UnityEngine.Random.Range(0.0f, 360.0f), UnityEngine.Random.Range(-30.0f, 30.0f)));
             }
-            if (Site.symbolFinds > 0)
+            for (int i = Site.symbolFinds; i > 0; i--)
             {
-                Physics.Raycast(new Vector3(Site.xCoordinate, 50, Site.yCoordinate), Vector3.down, out rayHit);
+                Physics.Raycast(new Vector3(Site.xCoordinate, 1000, Site.yCoordinate), Vector3.down, out rayHit);
                 Instantiate(symbolPrefab, rayHit.point, Quaternion.Euler(-90, UnityEngine.Random.Range(0.0f, 360.0f), UnityEngine.Random.Range(-30.0f, 30.0f)));
             }
-            if (Site.faunaFinds > 0)
+            for (int i = Site.faunaFinds; i > 0; i--)
             {
-                Physics.Raycast(new Vector3(Site.xCoordinate, 50, Site.yCoordinate), Vector3.down, out rayHit);
+                Physics.Raycast(new Vector3(Site.xCoordinate, 1000, Site.yCoordinate), Vector3.down, out rayHit);
                 Instantiate(faunaPrefab, rayHit.point, Quaternion.Euler(-90, UnityEngine.Random.Range(0.0f, 360.0f), UnityEngine.Random.Range(-30.0f, 30.0f)));
             }
         }

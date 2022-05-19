@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System;
 using System.Globalization;
+using TMPro;
 
 public class DataRead : MonoBehaviour
 {
@@ -14,7 +15,7 @@ public class DataRead : MonoBehaviour
     public GameObject organicPrefab;
     public GameObject symbolPrefab;
     public GameObject faunaPrefab;
-
+    public GameObject labelPrefab;
 
     [Serializable]
     public class Site
@@ -77,6 +78,8 @@ public class DataRead : MonoBehaviour
         RaycastHit rayHit;
         foreach (var Site in cdvSiteList.site)
         {
+            Physics.Raycast(new Vector3(Site.xCoordinate, 1000, Site.yCoordinate), Vector3.down, out rayHit);
+            Instantiate(labelPrefab, rayHit.point + 5 * Vector3.up, Quaternion.Euler(90, 0, 0)).GetComponent<TextMeshPro>().SetText(Site.name);
             for (int i = Site.humanFinds; i > 0;  i--)
             {
                 Physics.Raycast(new Vector3(Site.xCoordinate, 1000, Site.yCoordinate), Vector3.down, out rayHit);
@@ -90,7 +93,7 @@ public class DataRead : MonoBehaviour
             for (int i = Site.organicFinds; i > 0; i--)
             {
                 Physics.Raycast(new Vector3(Site.xCoordinate, 1000, Site.yCoordinate), Vector3.down, out rayHit);
-                Instantiate(organicPrefab, rayHit.point, Quaternion.Euler(-90, UnityEngine.Random.Range(0.0f, 360.0f), UnityEngine.Random.Range(-30.0f, 30.0f)));
+                Instantiate(organicPrefab, rayHit.point, Quaternion.Euler(0, UnityEngine.Random.Range(0.0f, 360.0f), UnityEngine.Random.Range(-30.0f, 30.0f)));
             }
             for (int i = Site.stoneFinds; i > 0; i--)
             {

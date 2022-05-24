@@ -27,16 +27,16 @@ public class Movement : MonoBehaviour
         float v = Input.GetAxisRaw("Vertical");
         float h = Input.GetAxisRaw("Horizontal");
         speed = Mathf.Clamp(speed + v * 0.01f,minSpeed,maxSpeed);
-        gameObject.transform.position = gameObject.transform.position + 0.1f * speed * gameObject.transform.forward;
+        gameObject.transform.position = gameObject.transform.position + 0.1f * speed * gameObject.transform.forward * Time.deltaTime * 150;
 
         //Turning //Boundary check, turns if not viable
         if (Mathf.Abs(gameObject.transform.position.x - 500) < boundary && Mathf.Abs(gameObject.transform.position.z - 500) < boundary)
         {
-            gameObject.transform.Rotate(0.0f, rotSpeed * h, 0.0f * Time.deltaTime);
+            gameObject.transform.Rotate(0.0f, 150 * rotSpeed * h * Time.deltaTime, 0.0f);
         }
         else
         {
-            gameObject.transform.Rotate(0.0f, rotSpeed, 0.0f * Time.deltaTime);
+            gameObject.transform.Rotate(0.0f, 150 * rotSpeed * Time.deltaTime, 0.0f);
             if (Mathf.Abs(gameObject.transform.GetChild(0).transform.localRotation.z) < tiltAngle)
             {
                 gameObject.transform.GetChild(0).transform.Rotate(0, 0, -150 * Time.deltaTime);
@@ -63,7 +63,7 @@ public class Movement : MonoBehaviour
         //Ascent and Descent
         if (Input.GetKey("space") && gameObject.transform.position.y < maxHeight && Input.GetAxisRaw("Horizontal") == 0)
         {
-            gameObject.transform.position = gameObject.transform.position + liftSpeed * gameObject.transform.up;
+            gameObject.transform.position = gameObject.transform.position + liftSpeed * 75 * gameObject.transform.up * Time.deltaTime;
             if (Mathf.Abs(gameObject.transform.GetChild(0).transform.localRotation.x) < tiltAngle)
             {
                 gameObject.transform.GetChild(0).transform.Rotate(-75 * Time.deltaTime, 0, 0);

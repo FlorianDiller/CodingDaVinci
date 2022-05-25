@@ -73,6 +73,7 @@ public class DataReadArchive : MonoBehaviour
             summaryContainer.SetActive(false);
             player.GetComponent<Movement>().enabled = true;
             audioObject.GetComponent<AudioSource>().enabled = true;
+            transform.GetComponents<AudioSource>()[1].Play();
         }
     }
 
@@ -115,6 +116,7 @@ public class DataReadArchive : MonoBehaviour
             closestSite.archived = true;
             player.GetComponent<Movement>().enabled = false;
             audioObject.GetComponent<AudioSource>().enabled = false;
+            transform.GetComponents<AudioSource>()[0].Play();
         }
     }
 

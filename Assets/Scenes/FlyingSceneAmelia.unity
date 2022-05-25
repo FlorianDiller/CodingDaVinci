@@ -4899,7 +4899,7 @@ MonoBehaviour:
   speed: 0.1
   minSpeed: 0.05
   maxSpeed: 5
-  rotSpeed: 0.3
+  rotSpeed: 0.5
   liftSpeed: 0.3
   tiltAngle: 0.3
   minHeight: 50

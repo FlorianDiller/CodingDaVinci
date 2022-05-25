@@ -24,6 +24,7 @@ public class DataReadArchive : MonoBehaviour
     public GameObject scoreLabel;
     public GameObject summaryLabel;
     public GameObject summaryContainer;
+    public GameObject audioObject;
 
     [Serializable]
     public class Site
@@ -71,6 +72,7 @@ public class DataReadArchive : MonoBehaviour
         {
             summaryContainer.SetActive(false);
             player.GetComponent<Movement>().enabled = true;
+            audioObject.GetComponent<AudioSource>().enabled = true;
         }
     }
 
@@ -112,6 +114,7 @@ public class DataReadArchive : MonoBehaviour
             scoreLabel.GetComponent<TextMeshProUGUI>().SetText("Sites archived:\n" + sitesArchived + "/" + tableSize);
             closestSite.archived = true;
             player.GetComponent<Movement>().enabled = false;
+            audioObject.GetComponent<AudioSource>().enabled = false;
         }
     }
 

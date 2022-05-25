@@ -1646,6 +1646,7 @@ GameObject:
   - component: {fileID: 515927737}
   - component: {fileID: 515927736}
   - component: {fileID: 515927735}
+  - component: {fileID: 515927738}
   m_Layer: 0
   m_Name: Audio Source
   m_TagString: Untagged
@@ -1665,7 +1666,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: cfa68e9735fda424fa912a400c72f8b7, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.1
+  m_Volume: 0.05
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -1859,6 +1860,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &515927738
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 515927734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5dfae88f3663ef948acd9868ddd0c305, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 0
+  player: {fileID: 1912771606}
 --- !u!1001 &519317815
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3180,7 +3195,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6ac7502184c13ff49bbb9fa06f97072b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textAssetData: {fileID: 4900000, guid: 3f1d31895e96e444b923add1516a23d1, type: 3}
+  textAssetData: {fileID: 4900000, guid: 96d0e0925c0c4d644b6b4b3ab219c479, type: 3}
   skullPrefab: {fileID: 971540939715744770, guid: 4687fe2c35083594a884c62e9b07ccd9, type: 3}
   firePrefab: {fileID: 1554213079344067837, guid: 822de28eb09303c4b884304cfb3af5f8, type: 3}
   stonePrefab: {fileID: 1063979805321738782, guid: 5def4bff3904d474090fc020831d96c5, type: 3}

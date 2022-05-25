@@ -12,20 +12,21 @@ public class MainMenuScript : MonoBehaviour
     public GameObject ameliaPlane;
     public GameObject ottoPlaneIdle;
     public GameObject ameliaPlaneIdle;
+    public AudioSource MotorRun;
 
     public void GoFly ()
     {
-        if(ameliaPlaneIdle.activeSelf)
+        MotorRun.GetComponent<AudioSource>().enabled = true;
+        MotorRun.GetComponent<AudioSource>().Play();
+        if (ameliaPlaneIdle.activeSelf)
         {
             ameliaPlaneIdle.SetActive(false);
             ameliaPlane.SetActive(true);
-            SceneManager.LoadScene(1);
         }
-        if(ottoPlaneIdle.activeSelf)
+        if (ottoPlaneIdle.activeSelf)
         {
             ottoPlaneIdle.SetActive(false);
             ottoPlane.SetActive(true);
-            SceneManager.LoadScene(2);
         }
     }
 
@@ -43,5 +44,19 @@ public class MainMenuScript : MonoBehaviour
         ottoPlaneIdle.SetActive(true);
         ameliaCharacter.SetActive(false);
         ameliaPlaneIdle.SetActive(false);
+    }
+    public void Update()
+    {
+        if (MotorRun.GetComponent<AudioSource>().enabled && !MotorRun.GetComponent<AudioSource>().isPlaying)
+        {
+            if (ameliaCharacter.activeSelf)
+            {
+                SceneManager.LoadScene(1);
+            }
+            if (ottoCharacter.activeSelf)
+            {
+                SceneManager.LoadScene(2);
+            }
+        }
     }
 }

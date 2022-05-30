@@ -110,6 +110,7 @@ public class DataReadArchive : MonoBehaviour
         if ((new Vector2(closestSite.xCoordinate, closestSite.yCoordinate) - new Vector2(player.transform.position.x, player.transform.position.z)).magnitude < 25 && !closestSite.archived)
         {
             summaryLabel.GetComponent<TextMeshProUGUI>().SetText(closestSite.summary);
+            summaryContainer.transform.rotation = Quaternion.Euler(0, 180, UnityEngine.Random.Range(-5, 5));
             summaryContainer.SetActive(true);
             sitesArchived++;
             scoreLabel.GetComponent<TextMeshProUGUI>().SetText("Sites archived:\n" + sitesArchived + "/" + tableSize);

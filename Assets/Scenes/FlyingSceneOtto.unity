@@ -5087,7 +5087,7 @@ MonoBehaviour:
   organicPrefab: {fileID: 5778161815650500578, guid: 56d928935271bf94a8a80a3e58326619, type: 3}
   symbolPrefab: {fileID: 1449746026006287660, guid: dd0b350df82784d4d8841aaf12014771, type: 3}
   faunaPrefab: {fileID: 6368288266879927638, guid: 74bf8b3a8715bfc4995081f67869bd3d, type: 3}
-  labelPrefab: {fileID: 6800688586470427090, guid: 2a4e761922a1e1347ac0c7e91ce4e4c7, type: 3}
+  labelPrefab: {fileID: 7575492193926016331, guid: 2a4e761922a1e1347ac0c7e91ce4e4c7, type: 3}
   player: {fileID: 1348966990}
   scoreLabel: {fileID: 741837400}
   summaryLabel: {fileID: 209158582}

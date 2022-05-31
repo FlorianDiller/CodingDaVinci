@@ -49,7 +49,7 @@ public class DataReadExplore : MonoBehaviour
     void Start()
     {
         ReadCSV();
-        scoreLabel.GetComponent<TextMeshPro>().SetText("Sites found:\n" + sitesFound + "/" + tableSize);
+        scoreLabel.GetComponent<TextMeshProUGUI>().SetText("Sites found:\n" + sitesFound + "/" + tableSize);
     }
 
     // Update is called once per frame
@@ -120,7 +120,7 @@ public class DataReadExplore : MonoBehaviour
                 }
                 Site.found = true;
                 sitesFound++;
-                scoreLabel.GetComponent<TextMeshPro>().SetText("Sites found:\n" + sitesFound + "/" + tableSize);
+                scoreLabel.GetComponent<TextMeshProUGUI>().SetText("Sites found:\n" + sitesFound + "/" + tableSize);
             }
         }
     }

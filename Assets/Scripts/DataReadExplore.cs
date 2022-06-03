@@ -35,6 +35,7 @@ public class DataReadExplore : MonoBehaviour
         public float xCoordinate;
         public float yCoordinate;
         public bool found;
+        public GameObject label;
     }
 
     [Serializable]
@@ -87,7 +88,8 @@ public class DataReadExplore : MonoBehaviour
             if ((new Vector2(Site.xCoordinate, Site.yCoordinate) - new Vector2(player.transform.position.x, player.transform.position.z)).magnitude < 25 && Site.found == false)
             {
                 Physics.Raycast(new Vector3(Site.xCoordinate, 1000, Site.yCoordinate), Vector3.down, out rayHit);
-                Instantiate(labelPrefab, rayHit.point + 5 * Vector3.up, Quaternion.Euler(90, 0, 0)).GetComponent<TextMeshPro>().SetText(Site.name);
+                Site.label = Instantiate(labelPrefab, rayHit.point + 5*Vector3.up, Quaternion.Euler(90, 0, 0));
+                Site.label.GetComponent<TextMeshPro>().SetText(Site.name);
                 for (int i = Site.humanFinds; i > 0; i--)
                 {
                     Physics.Raycast(new Vector3(Site.xCoordinate, 1000, Site.yCoordinate), Vector3.down, out rayHit);
@@ -121,6 +123,7 @@ public class DataReadExplore : MonoBehaviour
                 Site.found = true;
                 sitesFound++;
                 scoreLabel.GetComponent<TextMeshProUGUI>().SetText("Sites found:\n" + sitesFound + "/" + tableSize);
+                transform.GetComponent<AudioSource>().Play();
             }
         }
     }

@@ -40,6 +40,7 @@ public class DataReadArchive : MonoBehaviour
         public float xCoordinate;
         public float yCoordinate;
         public bool archived;
+        public GameObject label;
     }
 
     [Serializable]
@@ -127,7 +128,8 @@ public class DataReadArchive : MonoBehaviour
         foreach (var Site in cdvSiteList.site)
         {
             Physics.Raycast(new Vector3(Site.xCoordinate, 1000, Site.yCoordinate), Vector3.down, out rayHit);
-            Instantiate(labelPrefab, rayHit.point + 5 * Vector3.up, Quaternion.Euler(90, 0, 0)).GetComponent<TextMeshPro>().SetText(Site.name);
+            Site.label = Instantiate(labelPrefab, rayHit.point + 5*Vector3.up, Quaternion.Euler(90, 0, 0));
+            Site.label.GetComponent<TextMeshPro>().SetText(Site.name);
             for (int i = Site.humanFinds; i > 0; i--)
             {
                 Physics.Raycast(new Vector3(Site.xCoordinate, 1000, Site.yCoordinate), Vector3.down, out rayHit);

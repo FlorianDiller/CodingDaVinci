@@ -13,6 +13,7 @@ public class MainMenuScript : MonoBehaviour
     public GameObject ottoPlaneIdle;
     public GameObject ameliaPlaneIdle;
     public AudioSource MotorRun;
+    public GameObject instructionPanel;
 
     public void GoFly ()
     {
@@ -44,6 +45,10 @@ public class MainMenuScript : MonoBehaviour
         ottoPlaneIdle.SetActive(true);
         ameliaCharacter.SetActive(false);
         ameliaPlaneIdle.SetActive(false);
+    }
+    public void ToggleInstructions ()
+    {
+        instructionPanel.SetActive(!instructionPanel.activeSelf);
     }
     public void Update()
     {

@@ -10,6 +10,8 @@ public class DataReadExplore : MonoBehaviour
     public TextAsset textAssetData;
     private int tableSize = 0;
     private int sitesFound = 0;
+    public Site closestSite;
+
     [SerializeField]
     public GameObject skullPrefab;
     public GameObject firePrefab;
@@ -20,6 +22,8 @@ public class DataReadExplore : MonoBehaviour
     public GameObject labelPrefab;
     public GameObject player;
     public GameObject scoreLabel;
+    public GameObject target;
+    public GameObject particleSpawn;
 
     [Serializable]
     public class Site
@@ -57,6 +61,7 @@ public class DataReadExplore : MonoBehaviour
     void Update()
     {
         SpawnSites();
+        PointToClosestSite();
     }
 
     void ReadCSV()
@@ -80,12 +85,32 @@ public class DataReadExplore : MonoBehaviour
             cdvSiteList.site[i].found = false;
         }
     }
+    void PointToClosestSite()
+    {
+        if (sitesFound < tableSize)
+        {
+            foreach (var Site in cdvSiteList.site)
+            {
+                if (Site.found == false && (new Vector2(Site.xCoordinate, Site.yCoordinate) - new Vector2(player.transform.position.x, player.transform.position.z)).magnitude <= (new Vector2(closestSite.xCoordinate, closestSite.yCoordinate) - new Vector2(player.transform.position.x, player.transform.position.z)).magnitude)
+                {
+                    closestSite = Site;
+                }
+            }
+            //pointToSite.transform.LookAt(new Vector3(closestSite.xCoordinate, player.transform.position.y, closestSite.yCoordinate)); Active with scarf
+            target.transform.localRotation = Quaternion.Euler(0, 0, 180+Vector2.SignedAngle(Vector2.up,new Vector2(player.transform.position.x,player.transform.position.z) - new Vector2(closestSite.xCoordinate,closestSite.yCoordinate)));
+        }
+        else
+        {
+            target.SetActive(false);
+        }
+    }
+
     void SpawnSites()
     {
         RaycastHit rayHit;
         foreach (var Site in cdvSiteList.site)
         {
-            if ((new Vector2(Site.xCoordinate, Site.yCoordinate) - new Vector2(player.transform.position.x, player.transform.position.z)).magnitude < 25 && Site.found == false)
+            if (Site.found == false && (new Vector2(Site.xCoordinate, Site.yCoordinate) - new Vector2(player.transform.position.x, player.transform.position.z)).magnitude < 25)
             {
                 Physics.Raycast(new Vector3(Site.xCoordinate, 1000, Site.yCoordinate), Vector3.down, out rayHit);
                 Site.label = Instantiate(labelPrefab, rayHit.point + 5*Vector3.up, Quaternion.Euler(90, 0, 0));
@@ -121,9 +146,11 @@ public class DataReadExplore : MonoBehaviour
                     Instantiate(faunaPrefab, rayHit.point, Quaternion.Euler(-90, UnityEngine.Random.Range(0.0f, 360.0f), UnityEngine.Random.Range(-30.0f, 30.0f)));
                 }
                 Site.found = true;
+                closestSite = cdvSiteList.site[0];
                 sitesFound++;
                 scoreLabel.GetComponent<TextMeshProUGUI>().SetText("Sites found:\n" + sitesFound + "/" + tableSize);
                 transform.GetComponent<AudioSource>().Play();
+                Instantiate(particleSpawn, rayHit.point, Quaternion.Euler(90,0,0)).GetComponent<ParticleSystem>().Play();
             }
         }
     }

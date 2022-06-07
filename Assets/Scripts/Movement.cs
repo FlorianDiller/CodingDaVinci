@@ -44,9 +44,9 @@ public class Movement : MonoBehaviour
         }
 
         //Tilting while turning
-        if (Input.GetAxisRaw("Horizontal") != 0 && Mathf.Abs(gameObject.transform.GetChild(0).transform.localRotation.z) < tiltAngle && !Input.GetKey("c") && !Input.GetKey("space"))
+        if (h != 0 && Mathf.Abs(gameObject.transform.GetChild(0).transform.localRotation.z) < tiltAngle && !Input.GetKey("c") && !Input.GetKey("space"))
         {
-            gameObject.transform.GetChild(0).transform.Rotate(0, 0, -75 * Input.GetAxisRaw("Horizontal") * Time.deltaTime);
+            gameObject.transform.GetChild(0).transform.Rotate(0, 0, -75 * h * Time.deltaTime);
         }
         else //Tilt back to normal
         {
@@ -61,7 +61,7 @@ public class Movement : MonoBehaviour
         }
 
         //Ascent and Descent
-        if (Input.GetKey("space") && gameObject.transform.position.y < maxHeight && Input.GetAxisRaw("Horizontal") == 0)
+        if (Input.GetKey("space") && gameObject.transform.position.y < maxHeight && h == 0)
         {
             gameObject.transform.position = gameObject.transform.position + liftSpeed * 75 * gameObject.transform.up * Time.deltaTime;
             if (Mathf.Abs(gameObject.transform.GetChild(0).transform.localRotation.x) < tiltAngle)
@@ -69,7 +69,7 @@ public class Movement : MonoBehaviour
                 gameObject.transform.GetChild(0).transform.Rotate(-75 * Time.deltaTime, 0, 0);
             }
         }
-        if (Input.GetKey("c") && gameObject.transform.position.y > minHeight && Input.GetAxisRaw("Horizontal") == 0)
+        if (Input.GetKey("c") && gameObject.transform.position.y > minHeight && h == 0)
         {
             if (Mathf.Abs(gameObject.transform.GetChild(0).transform.localRotation.x) < tiltAngle)
             {

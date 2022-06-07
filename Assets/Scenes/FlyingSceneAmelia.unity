@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.4430049, g: 0.49219412, b: 0.57192254, a: 1}
+  m_IndirectSpecularColor: {r: 0.4430056, g: 0.4921946, b: 0.57192373, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -464,8 +464,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 36
-  m_fontSizeBase: 36
+  m_fontSize: 26
+  m_fontSizeBase: 26
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1543,6 +1543,78 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: -0.373, y: 36.541, z: -4.794}
+--- !u!1 &406901193
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 406901194}
+  - component: {fileID: 406901196}
+  - component: {fileID: 406901195}
+  m_Layer: 5
+  m_Name: Target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &406901194
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406901193}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 0.92, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1180390004}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 222.16, y: -110.76}
+  m_SizeDelta: {x: 2, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &406901195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406901193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Texture: {fileID: 2800000, guid: a4215624921405a41a6d98d9d50b4a8a, type: 3}
+  m_UVRect:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1
+    height: 1
+--- !u!222 &406901196
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 406901193}
+  m_CullTransparentMesh: 1
 --- !u!1 &419366863
 GameObject:
   m_ObjectHideFlags: 0
@@ -3045,7 +3117,6 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
-  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3118,18 +3189,6 @@ Transform:
   m_Father: {fileID: 1912771607}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
---- !u!114 &963194229
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963194225}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b09e1162c4d1254ca5819cf9f987f0d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &981827349
 GameObject:
   m_ObjectHideFlags: 0
@@ -3161,6 +3220,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   textAssetData: {fileID: 4900000, guid: 96d0e0925c0c4d644b6b4b3ab219c479, type: 3}
+  closestSite:
+    name: 
+    humanFinds: 0
+    faunaFinds: 0
+    stoneFinds: 0
+    organicFinds: 0
+    symbolFinds: 0
+    fireFinds: 0
+    summary: 
+    xCoordinate: 0
+    yCoordinate: 0
+    found: 0
+    label: {fileID: 0}
   skullPrefab: {fileID: 971540939715744770, guid: 4687fe2c35083594a884c62e9b07ccd9, type: 3}
   firePrefab: {fileID: 1554213079344067837, guid: 822de28eb09303c4b884304cfb3af5f8, type: 3}
   stonePrefab: {fileID: 1063979805321738782, guid: 5def4bff3904d474090fc020831d96c5, type: 3}
@@ -3170,6 +3242,8 @@ MonoBehaviour:
   labelPrefab: {fileID: 7575492193926016331, guid: 2a4e761922a1e1347ac0c7e91ce4e4c7, type: 3}
   player: {fileID: 1912771606}
   scoreLabel: {fileID: 97538216}
+  target: {fileID: 406901193}
+  particleSpawn: {fileID: 6396221710057179627, guid: e43022c0ad0687142bf92759139df900, type: 3}
   cdvSiteList:
     site: []
 --- !u!4 &981827351
@@ -3861,14 +3935,14 @@ RectTransform:
   m_GameObject: {fileID: 1103091963}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.36957604, y: 0.36957604, z: 0.36957604}
+  m_LocalScale: {x: 0.16669728, y: 0.16669728, z: 0.16669728}
   m_Children: []
   m_Father: {fileID: 1180390004}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -187, y: 189}
+  m_AnchoredPosition: {x: -83, y: 85}
   m_SizeDelta: {x: 1080, y: 1080}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1103091965
@@ -4086,6 +4160,7 @@ RectTransform:
   - {fileID: 97538217}
   - {fileID: 1103091964}
   - {fileID: 1801055657}
+  - {fileID: 406901194}
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -4781,14 +4856,14 @@ RectTransform:
   m_GameObject: {fileID: 1801055656}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.23800324, y: 0.23800324, z: 0.23800324}
+  m_LocalScale: {x: 0.10735136, y: 0.10735136, z: 0.10735136}
   m_Children: []
   m_Father: {fileID: 1180390004}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
-  m_AnchoredPosition: {x: -179.42401, y: 189.65}
+  m_AnchoredPosition: {x: -80.3, y: 85.28999}
   m_SizeDelta: {x: 150, y: 1000}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1801055658

@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 3871997247738992528}
   - component: {fileID: 3871997247738992543}
   - component: {fileID: 3871997247738992542}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: cloudPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}

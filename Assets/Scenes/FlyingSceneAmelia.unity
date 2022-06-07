@@ -776,7 +776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 106214858}
   - component: {fileID: 106214859}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: cloud-goq (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -795,7 +795,7 @@ Transform:
   m_LocalScale: {x: 250, y: 250, z: 250}
   m_Children: []
   m_Father: {fileID: 1592872933}
-  m_RootOrder: 8
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 90, y: -45, z: 0}
 --- !u!212 &106214859
 SpriteRenderer:
@@ -954,7 +954,7 @@ GameObject:
   m_Component:
   - component: {fileID: 115487520}
   - component: {fileID: 115487521}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: cloud-goq (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -973,7 +973,7 @@ Transform:
   m_LocalScale: {x: 250, y: 250, z: 250}
   m_Children: []
   m_Father: {fileID: 1592872933}
-  m_RootOrder: 6
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 90, y: -135, z: 0}
 --- !u!212 &115487521
 SpriteRenderer:
@@ -1036,7 +1036,7 @@ GameObject:
   m_Component:
   - component: {fileID: 115854181}
   - component: {fileID: 115854182}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: cloud-goq (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1055,7 +1055,7 @@ Transform:
   m_LocalScale: {x: 250, y: 250, z: 250}
   m_Children: []
   m_Father: {fileID: 1592872933}
-  m_RootOrder: 14
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 90, y: 45, z: 0}
 --- !u!212 &115854182
 SpriteRenderer:
@@ -2165,7 +2165,7 @@ GameObject:
   m_Component:
   - component: {fileID: 589480094}
   - component: {fileID: 589480095}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cloud
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2247,7 +2247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 601776204}
   - component: {fileID: 601776205}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cloud (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2266,7 +2266,7 @@ Transform:
   m_LocalScale: {x: 250, y: 250, z: 250}
   m_Children: []
   m_Father: {fileID: 1592872933}
-  m_RootOrder: 9
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: -90, z: 0}
 --- !u!212 &601776205
 SpriteRenderer:
@@ -2358,7 +2358,7 @@ GameObject:
   m_Component:
   - component: {fileID: 683905770}
   - component: {fileID: 683905771}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: cloud-goq (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2377,7 +2377,7 @@ Transform:
   m_LocalScale: {x: 250, y: 250, z: 250}
   m_Children: []
   m_Father: {fileID: 1592872933}
-  m_RootOrder: 10
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 90, y: -135, z: 0}
 --- !u!212 &683905771
 SpriteRenderer:
@@ -2653,7 +2653,7 @@ GameObject:
   m_Component:
   - component: {fileID: 799243962}
   - component: {fileID: 799243963}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cloud (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2764,7 +2764,7 @@ GameObject:
   m_Component:
   - component: {fileID: 823944000}
   - component: {fileID: 823944001}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: cloud-goq (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2783,7 +2783,7 @@ Transform:
   m_LocalScale: {x: 250, y: 250, z: 250}
   m_Children: []
   m_Father: {fileID: 1592872933}
-  m_RootOrder: 5
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 90, y: 135, z: 0}
 --- !u!212 &823944001
 SpriteRenderer:
@@ -2846,7 +2846,7 @@ GameObject:
   m_Component:
   - component: {fileID: 849495067}
   - component: {fileID: 849495068}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cloud (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2865,7 +2865,7 @@ Transform:
   m_LocalScale: {x: 250, y: 250, z: 250}
   m_Children: []
   m_Father: {fileID: 1592872933}
-  m_RootOrder: 11
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 90, y: 180, z: 0}
 --- !u!212 &849495068
 SpriteRenderer:
@@ -2928,7 +2928,7 @@ GameObject:
   m_Component:
   - component: {fileID: 913416756}
   - component: {fileID: 913416757}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: cloud-goq (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2947,7 +2947,7 @@ Transform:
   m_LocalScale: {x: 250, y: 250, z: 250}
   m_Children: []
   m_Father: {fileID: 1592872933}
-  m_RootOrder: 7
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 90, y: -45, z: 0}
 --- !u!212 &913416757
 SpriteRenderer:
@@ -3317,7 +3317,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1003648716}
   - component: {fileID: 1003648717}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cloud (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3648,7 +3648,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1035362311}
   - component: {fileID: 1035362312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cloud (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3667,7 +3667,7 @@ Transform:
   m_LocalScale: {x: 250, y: 250, z: 250}
   m_Children: []
   m_Father: {fileID: 1592872933}
-  m_RootOrder: 15
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!212 &1035362312
 SpriteRenderer:
@@ -3730,7 +3730,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1090915924}
   - component: {fileID: 1090915925}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cloud (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4493,7 +4493,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1521656496}
   - component: {fileID: 1521656497}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: cloud-goq
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4512,7 +4512,7 @@ Transform:
   m_LocalScale: {x: 250, y: 250, z: 250}
   m_Children: []
   m_Father: {fileID: 1592872933}
-  m_RootOrder: 4
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 90, y: 45, z: 0}
 --- !u!212 &1521656497
 SpriteRenderer:
@@ -4816,18 +4816,18 @@ Transform:
   - {fileID: 799243962}
   - {fileID: 1090915924}
   - {fileID: 1003648716}
+  - {fileID: 601776204}
+  - {fileID: 849495067}
+  - {fileID: 2035357685}
+  - {fileID: 1035362311}
   - {fileID: 1521656496}
   - {fileID: 823944000}
   - {fileID: 115487520}
   - {fileID: 913416756}
   - {fileID: 106214858}
-  - {fileID: 601776204}
   - {fileID: 683905770}
-  - {fileID: 849495067}
   - {fileID: 2065075861}
-  - {fileID: 2035357685}
   - {fileID: 115854181}
-  - {fileID: 1035362311}
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5693,7 +5693,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2035357685}
   - component: {fileID: 2035357686}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Cloud (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5712,7 +5712,7 @@ Transform:
   m_LocalScale: {x: 250, y: 250, z: 250}
   m_Children: []
   m_Father: {fileID: 1592872933}
-  m_RootOrder: 13
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 90, y: 90, z: 0}
 --- !u!212 &2035357686
 SpriteRenderer:
@@ -5871,7 +5871,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2065075861}
   - component: {fileID: 2065075862}
-  m_Layer: 7
+  m_Layer: 9
   m_Name: cloud-goq (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5890,7 +5890,7 @@ Transform:
   m_LocalScale: {x: 250, y: 250, z: 250}
   m_Children: []
   m_Father: {fileID: 1592872933}
-  m_RootOrder: 12
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 90, y: 135, z: 0}
 --- !u!212 &2065075862
 SpriteRenderer:

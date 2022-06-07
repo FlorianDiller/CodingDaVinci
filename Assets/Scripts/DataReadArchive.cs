@@ -62,19 +62,34 @@ public class DataReadArchive : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("x"))
+        if (Input.GetKeyDown("x"))
         {
             if (!summaryContainer.activeSelf)
             {
                 ArchiveSite();
             }
+            else
+            {
+                summaryContainer.SetActive(false);
+                player.GetComponent<Movement>().enabled = true;
+                audioObject.GetComponent<AudioSource>().enabled = true;
+                transform.GetComponents<AudioSource>()[1].Play();
+            }
         }
-        if (Input.GetKey(KeyCode.Escape))
+        
+        if (Input.GetKeyDown(KeyCode.Escape))
         {
-            summaryContainer.SetActive(false);
-            player.GetComponent<Movement>().enabled = true;
-            audioObject.GetComponent<AudioSource>().enabled = true;
-            transform.GetComponents<AudioSource>()[1].Play();
+            if (summaryContainer.activeSelf)
+            {
+                summaryContainer.SetActive(false);
+                player.GetComponent<Movement>().enabled = true;
+                audioObject.GetComponent<AudioSource>().enabled = true;
+                transform.GetComponents<AudioSource>()[1].Play();
+            }
+            else
+            {
+                //PauseMenu
+            }
         }
     }
 

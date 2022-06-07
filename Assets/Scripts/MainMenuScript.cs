@@ -14,6 +14,10 @@ public class MainMenuScript : MonoBehaviour
     public GameObject ameliaPlaneIdle;
     public AudioSource MotorRun;
     public GameObject instructionPanel;
+    public GameObject AmeliaPanel;
+    public GameObject OttoPanel;
+    public GameObject AmeliaButton;
+    public GameObject OttoButton;
 
     public void GoFly ()
     {
@@ -62,6 +66,23 @@ public class MainMenuScript : MonoBehaviour
             {
                 SceneManager.LoadScene(2);
             }
+        }
+        //MouseOver
+        if (Physics2D.Raycast(Input.mousePosition, Vector3.forward).transform == AmeliaButton.transform)
+        {
+            AmeliaPanel.SetActive(true);
+        }
+        else
+        {
+            AmeliaPanel.SetActive(false);
+        }
+        if (Physics2D.Raycast(Input.mousePosition, Vector3.forward).transform == OttoButton.transform)
+        {
+            OttoPanel.SetActive(true);
+        }
+        else
+        {
+            OttoPanel.SetActive(false);
         }
     }
 }

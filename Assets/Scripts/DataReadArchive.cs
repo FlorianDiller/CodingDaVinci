@@ -131,9 +131,11 @@ public class DataReadArchive : MonoBehaviour
             sitesArchived++;
             scoreLabel.GetComponent<TextMeshProUGUI>().SetText("Sites archived:\n" + sitesArchived + "/" + tableSize);
             closestSite.archived = true;
+            closestSite.label.GetComponent<TextMeshPro>().color = new Color(255, 255 , 255 , 255);
             player.GetComponent<Movement>().enabled = false;
             audioObject.GetComponent<AudioSource>().enabled = false;
             transform.GetComponents<AudioSource>()[0].Play();
+            closestSite = cdvSiteList.site[0];
         }
     }
 

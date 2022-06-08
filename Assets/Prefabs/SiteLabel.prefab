@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 7575492193926016328}
   - component: {fileID: 7575492193926016329}
   - component: {fileID: 7575492193926016330}
-  - component: {fileID: 2671352739609114146}
   m_Layer: 0
   m_Name: SiteLabel
   m_TagString: Untagged
@@ -108,8 +107,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 4278190080
+  m_fontColor: {r: 0, g: 0, b: 0, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -171,11 +170,3 @@ MonoBehaviour:
   _SortingLayer: 0
   _SortingLayerID: 0
   _SortingOrder: 0
---- !u!33 &2671352739609114146
-MeshFilter:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7575492193926016331}
-  m_Mesh: {fileID: 0}

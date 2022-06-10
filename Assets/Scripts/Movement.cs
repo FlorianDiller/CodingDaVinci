@@ -44,7 +44,7 @@ public class Movement : MonoBehaviour
         }
 
         //Tilting while turning
-        if (h != 0 && Mathf.Abs(gameObject.transform.GetChild(0).transform.localRotation.z) < tiltAngle && !Input.GetKey("c") && !Input.GetKey("space"))
+        if (h != 0 && Mathf.Abs(gameObject.transform.GetChild(0).transform.localRotation.z) < tiltAngle && !Input.GetKey("c") && !Input.GetKey("space") && !Input.GetKey(KeyCode.JoystickButton0) && !Input.GetKey(KeyCode.JoystickButton3))
         {
             gameObject.transform.GetChild(0).transform.Rotate(0, 0, -75 * h * Time.deltaTime);
         }
@@ -61,7 +61,7 @@ public class Movement : MonoBehaviour
         }
 
         //Ascent and Descent
-        if (Input.GetKey("space") && gameObject.transform.position.y < maxHeight && h == 0)
+        if ((Input.GetKey("space")||Input.GetKey(KeyCode.JoystickButton0)) && gameObject.transform.position.y < maxHeight && h == 0)
         {
             gameObject.transform.position = gameObject.transform.position + liftSpeed * 75 * gameObject.transform.up * Time.deltaTime;
             if (Mathf.Abs(gameObject.transform.GetChild(0).transform.localRotation.x) < tiltAngle)
@@ -69,7 +69,7 @@ public class Movement : MonoBehaviour
                 gameObject.transform.GetChild(0).transform.Rotate(-75 * Time.deltaTime, 0, 0);
             }
         }
-        if (Input.GetKey("c") && gameObject.transform.position.y > minHeight && h == 0)
+        if ((Input.GetKey("c")||Input.GetKey(KeyCode.JoystickButton3)) && gameObject.transform.position.y > minHeight && h == 0)
         {
             if (Mathf.Abs(gameObject.transform.GetChild(0).transform.localRotation.x) < tiltAngle)
             {
@@ -78,11 +78,11 @@ public class Movement : MonoBehaviour
             gameObject.transform.position = gameObject.transform.position + liftSpeed * 75 * -gameObject.transform.up * Time.deltaTime;
         }
         //Tilt back to normal
-        if (gameObject.transform.GetChild(0).transform.localRotation.x > 0 && !Input.GetKey("c"))
+        if (gameObject.transform.GetChild(0).transform.localRotation.x > 0 && !Input.GetKey("c") && !Input.GetKey(KeyCode.JoystickButton3))
         {
             gameObject.transform.GetChild(0).transform.Rotate(-75 * Time.deltaTime,0, 0);
         }
-        if (gameObject.transform.GetChild(0).transform.localRotation.x < 0 && !Input.GetKey("space"))
+        if (gameObject.transform.GetChild(0).transform.localRotation.x < 0 && !Input.GetKey("space") && !Input.GetKey(KeyCode.JoystickButton0))
         {
                 gameObject.transform.GetChild(0).transform.Rotate(75 * Time.deltaTime,0, 0);
         }

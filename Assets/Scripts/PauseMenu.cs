@@ -23,7 +23,7 @@ public class PauseMenu : MonoBehaviour
     {
         if (!summaryPanel.activeSelf || summaryPanel == null)
         {
-            if (Input.GetKeyDown(KeyCode.Escape))
+            if (Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.JoystickButton1))
             {
                 if (!pauseMenu.activeSelf)
                 {

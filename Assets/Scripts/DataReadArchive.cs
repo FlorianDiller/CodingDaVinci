@@ -62,7 +62,7 @@ public class DataReadArchive : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("x"))
+        if (Input.GetKeyDown("x") || Input.GetKeyDown(KeyCode.JoystickButton4))
         {
             if (!summaryContainer.activeSelf)
             {

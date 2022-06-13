@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4514293, g: 0.5008012, b: 0.5716632, a: 1}
+  m_IndirectSpecularColor: {r: 0.45142865, g: 0.5008004, b: 0.57166255, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1170,10 +1170,11 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Different forms of Australopithecus, Paranthropus, and early Homo lived
-    in Africa. Some of these hominins started to produce rough stone tools with cutting
-    edges. Their diets diversified and partially included more meat and bone marrow.
-    At the end of the period, Homo entered new territory outside their African homeland.
+  m_text: 3.3-1.8 million years ago, different forms of Australopithecus, Paranthropus,
+    and early Homo lived in Africa. Some of these hominins started to produce rough
+    stone tools with cutting edges. Their diets diversified and partially included
+    more meat and bone marrow. At the end of the period, Homo entered new territory
+    outside their African homeland.
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4f9223531229b3f45b969b99ce4e9b1e, type: 2}
   m_sharedMaterial: {fileID: -6992118398577217855, guid: 4f9223531229b3f45b969b99ce4e9b1e, type: 2}
@@ -7478,7 +7479,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3.3 to 1.8 years prior
+  m_text: African beginnings
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4f9223531229b3f45b969b99ce4e9b1e, type: 2}
   m_sharedMaterial: {fileID: -6992118398577217855, guid: 4f9223531229b3f45b969b99ce4e9b1e, type: 2}
@@ -7505,7 +7506,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 39.1
+  m_fontSize: 41.2
   m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -7646,7 +7647,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 31.25
+  m_fontSize: 27.35
   m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -8869,7 +8870,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 1.8 to 0.8 years prior
+  m_text: Expanding worlds
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4f9223531229b3f45b969b99ce4e9b1e, type: 2}
   m_sharedMaterial: {fileID: -6992118398577217855, guid: 4f9223531229b3f45b969b99ce4e9b1e, type: 2}
@@ -8896,7 +8897,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 38.8
+  m_fontSize: 43.65
   m_fontSizeBase: 40
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -9324,12 +9325,12 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Homo became the dominant hominin genus. Homo erectus and related forms
-    dispersed to East Asia, Southeast Asia and Europe. Beside the simple stone tools,
-    they started in Africa and the Near East to produce heavy-duty tools, which were
-    worked on two surfaces: handaxes. These were probably used to dissect animal
-    prey and work on wood to produce tools. For the first time, humans seem to have
-    handled natural fire.'
+  m_text: '1.8-0.8 million years ago, Homo became the dominant hominin genus. Homo
+    erectus and related forms dispersed to East Asia, Southeast Asia and Europe.
+    Beside the simple stone tools, they started in Africa and the Near East to produce
+    heavy-duty tools, which were worked on two surfaces: handaxes. These were probably
+    used to dissect animal prey and work on wood to produce tools. For the first
+    time, humans seem to have handled natural fire.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4f9223531229b3f45b969b99ce4e9b1e, type: 2}
   m_sharedMaterial: {fileID: -6992118398577217855, guid: 4f9223531229b3f45b969b99ce4e9b1e, type: 2}

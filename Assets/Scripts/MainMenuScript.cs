@@ -25,6 +25,7 @@ public class MainMenuScript : MonoBehaviour
     public GameObject OneMaPanel;
     public GameObject ThreeMaItem;
     public GameObject OneMaItem;
+    public GameObject initialPanel;
 
     public void GoFly ()
     {
@@ -94,8 +95,12 @@ public class MainMenuScript : MonoBehaviour
                 SceneManager.LoadScene(2);
             }
         }
+        if(initialPanel.activeSelf && Input.anyKey)
+        {
+            initialPanel.SetActive(false);
+        }
         //MouseOver
-        if (Physics2D.Raycast(Input.mousePosition, Vector3.forward).transform == AmeliaButton.transform)
+        if (!initialPanel.activeSelf && Physics2D.Raycast(Input.mousePosition, Vector3.forward).transform == AmeliaButton.transform)
         {
             AmeliaPanel.SetActive(true);
         }
@@ -103,7 +108,7 @@ public class MainMenuScript : MonoBehaviour
         {
             AmeliaPanel.SetActive(false);
         }
-        if (Physics2D.Raycast(Input.mousePosition, Vector3.forward).transform == OttoButton.transform)
+        if (!initialPanel.activeSelf && Physics2D.Raycast(Input.mousePosition, Vector3.forward).transform == OttoButton.transform)
         {
             OttoPanel.SetActive(true);
         }
@@ -111,7 +116,7 @@ public class MainMenuScript : MonoBehaviour
         {
             OttoPanel.SetActive(false);
         }
-        if (Physics2D.Raycast(Input.mousePosition, Vector3.forward).transform == ThreeMaButton.transform)
+        if (!initialPanel.activeSelf && Physics2D.Raycast(Input.mousePosition, Vector3.forward).transform == ThreeMaButton.transform)
         {
             ThreeMaPanel.SetActive(true);
         }
@@ -119,7 +124,7 @@ public class MainMenuScript : MonoBehaviour
         {
             ThreeMaPanel.SetActive(false);
         }
-        if (Physics2D.Raycast(Input.mousePosition, Vector3.forward).transform == OneMaButton.transform)
+        if (!initialPanel.activeSelf && Physics2D.Raycast(Input.mousePosition, Vector3.forward).transform == OneMaButton.transform)
         {
             OneMaPanel.SetActive(true);
         }

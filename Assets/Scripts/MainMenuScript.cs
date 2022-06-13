@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
 
 public class MainMenuScript : MonoBehaviour
 {
@@ -45,27 +46,35 @@ public class MainMenuScript : MonoBehaviour
     {
         ottoCharacter.SetActive(false);
         ottoPlaneIdle.SetActive(false);
+        OttoButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color(225, 225, 225, 225);
         ameliaCharacter.SetActive(true);
         ameliaPlaneIdle.SetActive(true);
+        AmeliaButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, 225);
     }
 
     public void ChooseOtto ()
     {
         ottoCharacter.SetActive(true);
         ottoPlaneIdle.SetActive(true);
+        OttoButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, 225);
         ameliaCharacter.SetActive(false);
         ameliaPlaneIdle.SetActive(false);
+        AmeliaButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color(225, 225, 225, 225);
     }
     public void ChooseThreeMa()
     {
         OneMaItem.SetActive(false);
+        OneMaButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color(225,225,225,225);
         ThreeMaItem.SetActive(true);
+        ThreeMaButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, 225);
         StaticVar.choseThreeMa = true;
     }
     public void ChooseOneMa()
     {
         OneMaItem.SetActive(true);
+        ThreeMaButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color(225, 225, 225, 225);
         ThreeMaItem.SetActive(false);
+        OneMaButton.transform.GetChild(0).GetComponent<TextMeshProUGUI>().color = new Color(0, 0, 0, 225);
         StaticVar.choseThreeMa = false;
     }
     public void ToggleInstructions ()

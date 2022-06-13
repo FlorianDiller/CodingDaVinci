@@ -7,7 +7,9 @@ using TMPro;
 
 public class DataReadExplore : MonoBehaviour
 {
-    public TextAsset textAssetData;
+    public TextAsset threeMaData;
+    public TextAsset oneMaData;
+    private TextAsset dataUsed;
     private int tableSize = 0;
     private int sitesFound = 0;
     public Site closestSite;
@@ -66,7 +68,15 @@ public class DataReadExplore : MonoBehaviour
 
     void ReadCSV()
     {
-        string[] data = textAssetData.text.Split(new string[] { ";", "\n" }, StringSplitOptions.None);
+        if (StaticVar.choseThreeMa)
+        {
+            dataUsed = threeMaData;
+        }
+        else
+        {
+            dataUsed = oneMaData;
+        }
+        string[] data = dataUsed.text.Split(new string[] { ";", "\n" }, StringSplitOptions.None);
         tableSize = data.Length / 12 - 1;
         cdvSiteList.site = new Site[tableSize];
         for (int i = 0; i < tableSize; i++)

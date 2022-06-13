@@ -7153,7 +7153,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5af7656dd73c654e9b9b5e6edd6699e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  textAssetData: {fileID: 4900000, guid: 01a89972ab56edc4597031b4b06b7118, type: 3}
+  threeMaData: {fileID: 4900000, guid: 0d67eef3867b5514490be5a3f9fb91af, type: 3}
+  oneMaData: {fileID: 4900000, guid: 01a89972ab56edc4597031b4b06b7118, type: 3}
   closestSite:
     name: 
     humanFinds: 0

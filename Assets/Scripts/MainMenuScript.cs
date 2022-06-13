@@ -18,6 +18,12 @@ public class MainMenuScript : MonoBehaviour
     public GameObject OttoPanel;
     public GameObject AmeliaButton;
     public GameObject OttoButton;
+    public GameObject ThreeMaButton;
+    public GameObject OneMaButton;
+    public GameObject ThreeMaPanel;
+    public GameObject OneMaPanel;
+    public GameObject ThreeMaItem;
+    public GameObject OneMaItem;
 
     public void GoFly ()
     {
@@ -49,6 +55,18 @@ public class MainMenuScript : MonoBehaviour
         ottoPlaneIdle.SetActive(true);
         ameliaCharacter.SetActive(false);
         ameliaPlaneIdle.SetActive(false);
+    }
+    public void ChooseThreeMa()
+    {
+        OneMaItem.SetActive(false);
+        ThreeMaItem.SetActive(true);
+        StaticVar.choseThreeMa = true;
+    }
+    public void ChooseOneMa()
+    {
+        OneMaItem.SetActive(true);
+        ThreeMaItem.SetActive(false);
+        StaticVar.choseThreeMa = false;
     }
     public void ToggleInstructions ()
     {
@@ -83,6 +101,22 @@ public class MainMenuScript : MonoBehaviour
         else
         {
             OttoPanel.SetActive(false);
+        }
+        if (Physics2D.Raycast(Input.mousePosition, Vector3.forward).transform == ThreeMaButton.transform)
+        {
+            ThreeMaPanel.SetActive(true);
+        }
+        else
+        {
+            ThreeMaPanel.SetActive(false);
+        }
+        if (Physics2D.Raycast(Input.mousePosition, Vector3.forward).transform == OneMaButton.transform)
+        {
+            OneMaPanel.SetActive(true);
+        }
+        else
+        {
+            OneMaPanel.SetActive(false);
         }
     }
 }

@@ -25,6 +25,7 @@ public class DataReadArchive : MonoBehaviour
     public GameObject player;
     public GameObject scoreLabel;
     public GameObject summaryLabel;
+    public GameObject symbolLabel;
     public GameObject summaryContainer;
     public GameObject audioObject;
 
@@ -136,6 +137,31 @@ public class DataReadArchive : MonoBehaviour
         if ((new Vector2(closestSite.xCoordinate, closestSite.yCoordinate) - new Vector2(player.transform.position.x, player.transform.position.z)).magnitude < 25 && !closestSite.archived)
         {
             summaryLabel.GetComponent<TextMeshProUGUI>().SetText(closestSite.summary);
+            symbolLabel.GetComponent<TextMeshProUGUI>().SetText("");
+            if(closestSite.humanFinds>0)
+            {
+                symbolLabel.GetComponent<TextMeshProUGUI>().SetText(symbolLabel.GetComponent<TextMeshProUGUI>().text + "<sprite=1>");
+            }
+            if (closestSite.fireFinds > 0)
+            {
+                symbolLabel.GetComponent<TextMeshProUGUI>().SetText(symbolLabel.GetComponent<TextMeshProUGUI>().text + "<sprite=0>");
+            }
+            if (closestSite.faunaFinds > 0)
+            {
+                symbolLabel.GetComponent<TextMeshProUGUI>().SetText(symbolLabel.GetComponent<TextMeshProUGUI>().text + "<sprite=2>");
+            }
+            if (closestSite.stoneFinds > 0)
+            {
+                symbolLabel.GetComponent<TextMeshProUGUI>().SetText(symbolLabel.GetComponent<TextMeshProUGUI>().text + "<sprite=5>");
+            }
+            if (closestSite.organicFinds > 0)
+            {
+                symbolLabel.GetComponent<TextMeshProUGUI>().SetText(symbolLabel.GetComponent<TextMeshProUGUI>().text + "<sprite=4>");
+            }
+            if (closestSite.symbolFinds > 0)
+            {
+                symbolLabel.GetComponent<TextMeshProUGUI>().SetText(symbolLabel.GetComponent<TextMeshProUGUI>().text + "<sprite=3>");
+            }
             summaryContainer.transform.rotation = Quaternion.Euler(0, 180, UnityEngine.Random.Range(-5, 5));
             summaryContainer.SetActive(true);
             sitesArchived++;

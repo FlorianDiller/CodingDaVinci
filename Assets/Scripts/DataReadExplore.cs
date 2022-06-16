@@ -107,7 +107,6 @@ public class DataReadExplore : MonoBehaviour
                     closestSite = Site;
                 }
             }
-            //pointToSite.transform.LookAt(new Vector3(closestSite.xCoordinate, player.transform.position.y, closestSite.yCoordinate)); Active with scarf
             target.transform.localRotation = Quaternion.Euler(0, 0, 180+Vector2.SignedAngle(Vector2.up,new Vector2(player.transform.position.x,player.transform.position.z) - new Vector2(closestSite.xCoordinate,closestSite.yCoordinate)));
         }
         else
@@ -157,7 +156,13 @@ public class DataReadExplore : MonoBehaviour
                     Instantiate(faunaPrefab, rayHit.point, Quaternion.Euler(-90, UnityEngine.Random.Range(0.0f, 360.0f), UnityEngine.Random.Range(-30.0f, 30.0f)));
                 }
                 Site.found = true;
-                closestSite = cdvSiteList.site[0];
+                foreach (var newSite in cdvSiteList.site)
+                {
+                    if(!newSite.found)
+                    {
+                        closestSite = newSite;
+                    }
+                }
                 sitesFound++;
                 scoreLabel.GetComponent<TextMeshProUGUI>().SetText("Sites found:\n" + sitesFound + "/" + tableSize);
                 transform.GetComponent<AudioSource>().Play();

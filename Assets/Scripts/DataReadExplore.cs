@@ -26,6 +26,7 @@ public class DataReadExplore : MonoBehaviour
     public GameObject scoreLabel;
     public GameObject target;
     public GameObject particleSpawn;
+    public LayerMask raycastLayers;
 
     [Serializable]
     public class Site
@@ -123,7 +124,7 @@ public class DataReadExplore : MonoBehaviour
             if (Site.found == false && (new Vector2(Site.xCoordinate, Site.yCoordinate) - new Vector2(player.transform.position.x, player.transform.position.z)).magnitude < 25)
             {
                 Physics.Raycast(new Vector3(Site.xCoordinate, 1000, Site.yCoordinate), Vector3.down, out rayHit);
-                Site.label = Instantiate(labelPrefab, rayHit.point + 5*Vector3.up, Quaternion.Euler(90, 0, 0));
+                Site.label = Instantiate(labelPrefab, new Vector3(rayHit.point.x,10,rayHit.point.z), Quaternion.Euler(90, 0, 0));
                 Site.label.GetComponent<TextMeshPro>().SetText(Site.name);
                 for (int i = Site.humanFinds; i > 0; i--)
                 {

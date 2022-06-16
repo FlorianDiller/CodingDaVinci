@@ -1568,7 +1568,7 @@ GameObject:
   - component: {fileID: 335165324}
   - component: {fileID: 335165323}
   - component: {fileID: 335165322}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Terrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4209,6 +4209,9 @@ MonoBehaviour:
   scoreLabel: {fileID: 97538216}
   target: {fileID: 406901193}
   particleSpawn: {fileID: 6396221710057179627, guid: e43022c0ad0687142bf92759139df900, type: 3}
+  raycastLayers:
+    serializedVersion: 2
+    m_Bits: 8
   cdvSiteList:
     site: []
 --- !u!4 &981827351

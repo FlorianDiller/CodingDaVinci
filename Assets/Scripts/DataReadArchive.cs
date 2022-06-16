@@ -28,6 +28,7 @@ public class DataReadArchive : MonoBehaviour
     public GameObject symbolLabel;
     public GameObject summaryContainer;
     public GameObject audioObject;
+    public LayerMask raycastLayers;
 
     [Serializable]
     public class Site
@@ -180,8 +181,8 @@ public class DataReadArchive : MonoBehaviour
         RaycastHit rayHit;
         foreach (var Site in cdvSiteList.site)
         {
-            Physics.Raycast(new Vector3(Site.xCoordinate, 1000, Site.yCoordinate), Vector3.down, out rayHit);
-            Site.label = Instantiate(labelPrefab, rayHit.point + 5*Vector3.up, Quaternion.Euler(90, 0, 0));
+            Physics.Raycast(new Vector3(Site.xCoordinate, 1000, Site.yCoordinate), Vector3.down, out rayHit, Mathf.Infinity);
+            Site.label = Instantiate(labelPrefab, new Vector3(rayHit.point.x, 10, rayHit.point.z), Quaternion.Euler(90, 0, 0));
             Site.label.GetComponent<TextMeshPro>().SetText(Site.name);
             for (int i = Site.humanFinds; i > 0; i--)
             {

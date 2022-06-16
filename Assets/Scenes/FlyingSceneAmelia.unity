@@ -6210,7 +6210,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cloudNumber: 5
-  cloudPrefab: {fileID: 3871997247738992540, guid: 2f66ecb99965df84ba2da2ff49eb369f, type: 3}
+  cloudPrefab: {fileID: 1901961957607481656, guid: ae7cef13e7e73214daa8d4599bfdb97d, type: 3}
 --- !u!4 &1592872933
 Transform:
   m_ObjectHideFlags: 0

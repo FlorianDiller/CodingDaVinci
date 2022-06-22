@@ -10,8 +10,8 @@ public class DataReadArchive : MonoBehaviour
     public TextAsset threeMaData;
     public TextAsset oneMaData;
     private TextAsset dataUsed;
-    private int tableSize = 0;
-    private int sitesArchived = 0;
+    public int tableSize = 0;
+    public int sitesArchived = 0;
     public Site closestSite;
 
     [SerializeField]

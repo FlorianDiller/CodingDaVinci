@@ -65,6 +65,7 @@ public class PauseMenu : MonoBehaviour
         audioPlayer.GetComponent<AudioSource>().Play();
         pauseMenu.SetActive(false);
         gameUI.SetActive(true);
+        isPaused = false;
     }
     public void MainMenu()
     {

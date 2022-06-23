@@ -66,19 +66,21 @@ public class DataReadArchive : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!player.GetComponent<PauseMenu>().isPaused && Input.GetKeyDown("x") || Input.GetKeyDown(KeyCode.JoystickButton4))
+        if (Input.GetKeyDown("x") || Input.GetKeyDown(KeyCode.JoystickButton4))
         {
-            if (!summaryContainer.activeSelf)
+            if (!summaryContainer.activeSelf && !player.GetComponent<PauseMenu>().isPaused)
             {
-                player.GetComponent<PauseMenu>().isPaused = true;
                 ArchiveSite();
             }
             else
             {
-                player.GetComponent<PauseMenu>().isPaused = false;
-                summaryContainer.SetActive(false);
-                audioObject.GetComponent<AudioSource>().enabled = true;
-                transform.GetComponents<AudioSource>()[1].Play();
+                if(summaryContainer.activeSelf)
+                {
+                    player.GetComponent<PauseMenu>().isPaused = false;
+                    summaryContainer.SetActive(false);
+                    audioObject.GetComponent<AudioSource>().enabled = true;
+                    transform.GetComponents<AudioSource>()[1].Play();
+                }
             }
         }
         
@@ -167,6 +169,7 @@ public class DataReadArchive : MonoBehaviour
             summaryContainer.transform.rotation = Quaternion.Euler(0, 180, UnityEngine.Random.Range(-5, 5));
             summaryContainer.SetActive(true);
             sitesArchived++;
+            player.GetComponent<PauseMenu>().isPaused = true;
             scoreLabel.GetComponent<TextMeshProUGUI>().SetText("Sites archived:\n" + sitesArchived + "/" + tableSize);
             closestSite.archived = true;
             closestSite.label.GetComponent<TextMeshPro>().color = new Color(255, 255 , 255 , 255);

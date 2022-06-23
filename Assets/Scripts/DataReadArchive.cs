@@ -66,16 +66,17 @@ public class DataReadArchive : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("x") || Input.GetKeyDown(KeyCode.JoystickButton4))
+        if (!player.GetComponent<PauseMenu>().isPaused && Input.GetKeyDown("x") || Input.GetKeyDown(KeyCode.JoystickButton4))
         {
             if (!summaryContainer.activeSelf)
             {
+                player.GetComponent<PauseMenu>().isPaused = true;
                 ArchiveSite();
             }
             else
             {
+                player.GetComponent<PauseMenu>().isPaused = false;
                 summaryContainer.SetActive(false);
-                player.GetComponent<Movement>().enabled = true;
                 audioObject.GetComponent<AudioSource>().enabled = true;
                 transform.GetComponents<AudioSource>()[1].Play();
             }
@@ -85,8 +86,8 @@ public class DataReadArchive : MonoBehaviour
         {
             if (summaryContainer.activeSelf)
             {
+                player.GetComponent<PauseMenu>().isPaused = false;
                 summaryContainer.SetActive(false);
-                player.GetComponent<Movement>().enabled = true;
                 audioObject.GetComponent<AudioSource>().enabled = true;
                 transform.GetComponents<AudioSource>()[1].Play();
             }
@@ -169,7 +170,6 @@ public class DataReadArchive : MonoBehaviour
             scoreLabel.GetComponent<TextMeshProUGUI>().SetText("Sites archived:\n" + sitesArchived + "/" + tableSize);
             closestSite.archived = true;
             closestSite.label.GetComponent<TextMeshPro>().color = new Color(255, 255 , 255 , 255);
-            player.GetComponent<Movement>().enabled = false;
             audioObject.GetComponent<AudioSource>().enabled = false;
             transform.GetComponents<AudioSource>()[0].Play();
             closestSite = cdvSiteList.site[0];

@@ -5,6 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class PauseMenu : MonoBehaviour
 {
+    public bool isPaused = false;
     [SerializeField]
     public GameObject player;
     public GameObject instructionPanel;
@@ -29,13 +30,14 @@ public class PauseMenu : MonoBehaviour
             {
                 if (!pauseMenu.activeSelf)
                 {
+                    isPaused = true;
                     audioPlayer.GetComponent<AudioSource>().Stop();
                     gameUI.SetActive(false);
-                    player.GetComponent<Movement>().enabled = false;
                     pauseMenu.SetActive(true);
                 }
                 else
                 {
+                    isPaused = false;
                     Continue();
                 }
             }
@@ -63,7 +65,6 @@ public class PauseMenu : MonoBehaviour
         audioPlayer.GetComponent<AudioSource>().Play();
         pauseMenu.SetActive(false);
         gameUI.SetActive(true);
-        player.GetComponent<Movement>().enabled = true;
     }
     public void MainMenu()
     {

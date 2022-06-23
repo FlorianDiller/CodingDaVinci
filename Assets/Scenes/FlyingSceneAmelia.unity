@@ -7106,8 +7106,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -72.5, y: 75}
-  m_SizeDelta: {x: -455, y: -550}
+  m_AnchoredPosition: {x: -75, y: 75}
+  m_SizeDelta: {x: -490, y: -590}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1827157285
 MonoBehaviour:
@@ -7132,10 +7132,10 @@ MonoBehaviour:
   m_text: "Use the Keyboard to navigate your pilot:\n- Left/right arrow keys for
     rotation\n- Up arrow key for acceleration\n- Down arrow key for decceleration\n-
     C to sink\n- Space to rise\n- X to investigate a site (only Otto)\n- X or Esc
-    to close investigation (only Otto)\n\nFind these remnants of culture at the sites:\n  
-    <sprite=0>\tSigns of fire\n   <sprite=3>\tSymbolic objects\n   <sprite=2>\tRemains
-    of fauna\n   <sprite=1>\tHuman remains\n   <sprite=4>\tOrganic tools\n    <sprite=5>\tStone
-    tools"
+    to close investigation (only Otto)\n\nFinds of cultural remnants are stacked
+    individually at the sites:\n   <sprite=0>\tSigns of fire\n   <sprite=3>\tSymbolic
+    objects\n   <sprite=2>\tRemains of fauna\n   <sprite=1>\tHuman remains\n   <sprite=4>\tOrganic
+    tools\n    <sprite=5>\tStone tools"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4f9223531229b3f45b969b99ce4e9b1e, type: 2}
   m_sharedMaterial: {fileID: -6992118398577217855, guid: 4f9223531229b3f45b969b99ce4e9b1e, type: 2}

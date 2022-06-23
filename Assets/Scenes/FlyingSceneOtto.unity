@@ -1034,14 +1034,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 58.05
+  m_fontSize: 55.35
   m_fontSizeBase: 12
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 10
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 8
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1070,7 +1070,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -82.9858, y: -38.40518, z: -61.22525, w: -50.734467}
+  m_margin: {x: -72.71122, y: -31.878403, z: -49.832626, w: -50.734467}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2093,8 +2093,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -72.5, y: 75}
-  m_SizeDelta: {x: -455, y: -550}
+  m_AnchoredPosition: {x: -75, y: 75}
+  m_SizeDelta: {x: -490, y: -590}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &450652034
 MonoBehaviour:
@@ -2119,10 +2119,10 @@ MonoBehaviour:
   m_text: "Use the Keyboard to navigate your pilot:\n- Left/right arrow keys for
     rotation\n- Up arrow key for acceleration\n- Down arrow key for decceleration\n-
     C to sink\n- Space to rise\n- X to investigate a site (only Otto)\n- X or Esc
-    to close investigation (only Otto)\n\nFind these remnants of culture at the sites:\n  
-    <sprite=0>\tSigns of fire\n   <sprite=3>\tSymbolic objects\n   <sprite=2>\tRemains
-    of fauna\n   <sprite=1>\tHuman remains\n   <sprite=4>\tOrganic tools\n    <sprite=5>\tStone
-    tools"
+    to close investigation (only Otto)\n\nFinds of cultural remnants are stacked
+    individually at the sites:\n   <sprite=0>\tSigns of fire\n   <sprite=3>\tSymbolic
+    objects\n   <sprite=2>\tRemains of fauna\n   <sprite=1>\tHuman remains\n   <sprite=4>\tOrganic
+    tools\n    <sprite=5>\tStone tools"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4f9223531229b3f45b969b99ce4e9b1e, type: 2}
   m_sharedMaterial: {fileID: -6992118398577217855, guid: 4f9223531229b3f45b969b99ce4e9b1e, type: 2}
